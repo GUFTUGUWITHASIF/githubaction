@@ -28,13 +28,13 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
-          host: 3.25.179.252
+          host:13.211.159.191
           username: ubuntu
           key: ${{ secrets.SERVER_PASSWORD1 }}
           port: 22
           script: |
             cd /var/www/html
-            sudo git clone https://github.com/Srk7995/githubaction.git
+            sudo git clone https://github.com/GUFTUGUWITHASIF/githubaction.git
             cd githubaction
             sudo composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
             sudo chown -R www-data:www-data storage/
